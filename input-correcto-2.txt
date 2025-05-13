@@ -1,0 +1,11 @@
+
+mientrasverdadero{
+    imprimir("Inicio del bucle externo");
+    mientrasfalso{
+        imprimir("Este no se ejecuta");
+    }
+    imprimir("Fin del bucle externo");
+}
+
+
+

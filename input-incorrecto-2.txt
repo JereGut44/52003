@@ -1,0 +1,5 @@
+ imprimir("Primera línea");
+mientrasfalso{
+    imprimir("Nunca se ejecuta");
+}
+imprimir("Última línea");
