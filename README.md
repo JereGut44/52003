@@ -7,5 +7,7 @@
 5. Compilar y ejecutar el programa: Utilizamos el comando "F5" para que comience la depuración y ejecución del programa.
 6. Veremos la salida en la parte de la consola, obteniendo el árbol de análisis sintáctico en formato de texto.
 7. Para ver el arbol de derivación, los lexer tokens, parser rules,  necesitamos colocarnos sobre el archivo g4 e ir a la pestaña de ANTLR4 (ubicada en la parte izquierda).
-8. Para ver la tabla de lexemas y tokens; y el análisis léxico debemos inicializar el programa:
-   	en la consola escribimos "npm start".
+8. Para el análisis léxico debemos inicializar el programa:
+   	-en la consola escribimos "npm start".
+9. Para ver la tabla de tokens y lexemas debemos copiar en la consola el siguiente comando y ejecutarlo:
+    	java -cp ".;antlr-4.13.2-complete.jar" TokenTable
