@@ -5,5 +5,7 @@
 	En este archivo se debe copiar lo que se quiere probar, por ejemplo, alguno de los ejemplos entregados en archivo de texto.
 	Una vez copiado el ejemplo, guardar los cambios (ctrl + S) para que el programa utilice esta entrada.
 5. Compilar y ejecutar el programa: Utilizamos el comando "F5" para que comience la depuración y ejecución del programa.
-6. Veremos la salida en la parte de la consola, obteniendo los resultados.
+6. Veremos la salida en la parte de la consola, obteniendo el árbol de análisis sintáctico en formato de texto.
 7. Para ver el arbol de derivación, los lexer tokens, parser rules,  necesitamos colocarnos sobre el archivo g4 e ir a la pestaña de ANTLR4 (ubicada en la parte izquierda).
+8. Para ver la tabla de lexemas y tokens; y el análisis léxico debemos inicializar el programa:
+   	en la consola escribimos "npm start".
