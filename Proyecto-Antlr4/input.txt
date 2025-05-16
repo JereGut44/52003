@@ -1,4 +1,0 @@
-imprimir("hola mundo");
-
-
-
