@@ -1,7 +1,6 @@
-import CalculatorLexer from "./generated/CalculatorLexer.js";
-import CalculatorParser from "./generated/CalculatorParser.js";
-import { CustomCalculatorListener } from "./CustomCalculatorListener.js";
-import { CustomCalculatorVisitor } from "./CustomCalculatorVisitor.js";
+import ProgramaLexer from './generated/ProgramaLexer.js';
+import ProgramaParser from './generated/ProgramaParser.js'
+import ProgramaVisitor from './generated/ProgramaVisitor.js';
 import antlr4, { CharStreams, CommonTokenStream, ParseTreeWalker } from "antlr4";
 import readline from 'readline';
 import fs from 'fs';
@@ -20,10 +19,10 @@ async function main() {
 
     // Proceso la entrada con el analizador e imprimo el arbol de analisis en formato texto
     let inputStream = CharStreams.fromString(input);
-    let lexer = new CalculatorLexer(inputStream);
+    let lexer = new ProgramaLexer(inputStream);
     let tokenStream = new CommonTokenStream(lexer);
-    let parser = new CalculatorParser(tokenStream);
-    let tree = parser.prog();
+    let parser = new ProgramaParser(tokenStream);
+    let tree = parser.instruccion();
     
     // Verifico si se produjeron errores
     if (parser.syntaxErrorsCount > 0) {
@@ -39,7 +38,7 @@ async function main() {
         // ParseTreeWalker.DEFAULT.walk(listener, tree);
 
         // Utilizo un visitor para visitar los nodos que me interesan de mi arbol
-        const visitor = new CustomCalculatorVisitor();
+        const visitor = new ProgramaVisitor();
         visitor.visit(tree);   
     }
 }
